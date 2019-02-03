@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display Movie Information</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="movies.js"></script>
+	<style>
+	body{
+		background-color: white;
+	}
+	.label{
+		position:relative;
+		float:left;
+		width:30%;
+		text-align:center;
+		margin:10px;
+		background-color:gray;
+		color:white;
+	}
+	#output{
+		position:relative;
+		clear:left;
+		float:left;
+		width:30%;
+		text-align:left;
+		margin:10px;
+		border: 1px solid black;
+		margin-top: 0px;
+	}
+	.desc{
+		position:relative;
+		float:left;
+		width:30%;
+		text-align:left;
+		margin:10px;
+		margin-top: 0px;
+		border: 1px solid black;
+	}
+	ol{
+		list-style: none;
+		padding-left: 0px;
+		margin-top:0px;
+		overflow:hidden;
+	}
+	li{
+		position:relative;
+		clear:left;
+		float:left;
+		text-align: center;
+		width: 50%;
+		cursor: pointer;
+		color:blue;
+	}
+	li:hover{
+		background-color: gray;
+		color:white;
+	}
+	.results{
+		position: relative;
+		float: left;
+		width:50%;
+		text-align: center;
+	}
+	#img{
+		position:relative;
+		float:left;
+		width:50%
+	}
+	img {
+		border: 1px solid black;
+	}
+	#movie{
+		position:relative;
+		float:left;
+		width:50%;
+	}
+	#description{
+		position:relative;
+		float: left;
+	}
+	.genres,.cast{
+		clear:left;
+		float:left;
+		margin-bottom: 4px;
+		font-size:14px;
+	}
+	.title{
+		clear:left;
+		float:left;
+		font-size: 20px;
+		margin-bottom: 4px;
+		font-weight: bold;
+	}
+	.credits{
+		clear:left;
+		float:left;
+	}
+	</style>
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>Movie title: <input type="text" id="form-input"/></label>
+       <input type="button" onclick="sendRequest();" value="Display Info"/>
+    </form>
+	
+	
+	<label class="label">Movie Titles</label>
+	<label class="label">Movie Description</label>
+	
+	
+	<div id="output">This will contain title and year</div>
+	<div class="desc">
+	<div id="img">This will contain image</div>
+	<div id="movie">This will contain the title,genres</div>
+	<div id="credits">Cast of the movie</div>
+	<div id="description">This will contain the description of the movie</div>
+	</div>
+	
+  </body>
+</html>
